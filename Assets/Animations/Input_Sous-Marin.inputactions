@@ -106,7 +106,7 @@
                     "name": "",
                     "id": "0f9492c0-c7e8-464b-9f3b-8dac16c29283",
                     "path": "<Keyboard>/shift",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "Keybord",
                     "action": "Speed",
