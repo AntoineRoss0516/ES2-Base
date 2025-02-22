@@ -8,6 +8,7 @@ public class ControlSousMarin : MonoBehaviour
 {
     [SerializeField] private bool _speedSpeed;
     [SerializeField] private float _vitessePromenade;
+    [SerializeField] private float _vitesseRecule;
     private Rigidbody _rb;
     private Vector3 directionInput;
 
@@ -23,14 +24,20 @@ public class ControlSousMarin : MonoBehaviour
     {
         Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitessePromenade;
         directionInput = new Vector3(0f, directionAvecVitesse.z, directionAvecVitesse.y);
-        Debug.Log("Boo DUMBASS");
+
+    }
+
+    void OnReculer(InputValue directionBase)
+    {
+        Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitesseRecule;
+        directionInput = new Vector3(0f, -directionAvecVitesse.z, -directionAvecVitesse.y);
 
     }
 
     void OnSpeed()
     {
         _vitessePromenade = 2;
-       
+
     }
 
 
@@ -40,5 +47,12 @@ public class ControlSousMarin : MonoBehaviour
         Vector3 mouvement = directionInput;
 
         _rb.AddForce(mouvement, ForceMode.VelocityChange);
+
+        Vector3 vitesseSurPlanez = new Vector3(0f , 0f, _rb.velocity.z);
+        Vector3 vitesseSurPlaney = new Vector3(0f , _rb.velocity.y, 0f);
+        _animator.SetFloat("VitesseZ", vitesseSurPlanez.magnitude * _modifierAnimTranslation);
+        _animator.SetFloat("VitesseY", vitesseSurPlaney.magnitude * _modifierAnimTranslation);
+        _animator.SetFloat("Deplacementz", vitesseSurPlanez.magnitude);
+        _animator.SetFloat("Deplacementy", vitesseSurPlaney.magnitude);
     }
 }
