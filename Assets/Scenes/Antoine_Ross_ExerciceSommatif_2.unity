@@ -1864,8 +1864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089ac0bb603b6dd4eb1903496ebb415a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedSpeed: 0
-  _vitessePromenade: 0.1
+  _vitessePromenade: 0.2
   _modifierAnimTranslation: 1.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

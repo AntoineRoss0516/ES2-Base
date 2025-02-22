@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class ControlSousMarin : MonoBehaviour
 {
-    [SerializeField] private bool _speedSpeed;
     [SerializeField] private float _vitessePromenade;
     private Rigidbody _rb;
     private Vector3 directionInput;
@@ -18,17 +17,23 @@ public class ControlSousMarin : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }
+    void OnSpeed(InputValue etatBouton)
+    {
+        if (etatBouton.isPressed)
+        {
+            _vitessePromenade =_vitessePromenade*2;
+            
+        }
+        else
+        {
+            _vitessePromenade = _vitessePromenade * 0.5f;
+        }
 
+    }
     void OnPromener(InputValue directionBase)
     {
         Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitessePromenade;
         directionInput = new Vector3(0f, directionAvecVitesse.z, directionAvecVitesse.y);
-    }
-
-    void OnSpeed()
-    {
-        _vitessePromenade = 2;
-
     }
 
 
