@@ -48,34 +48,23 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "backward",
+                    "id": "f55f4fa1-f9fd-47d6-b001-83a6343e59b1",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Promener",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "down",
-                    "id": "dc8af0b7-beda-400b-8d38-80166afa7f70",
+                    "id": "78aeaae6-32e9-4395-85ba-fbaedaafbaf5",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keybord",
-                    "action": "Promener",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "8acd8eb9-eaff-4634-96c6-8198d5ac89fb",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keybord",
-                    "action": "Promener",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "0ee0e618-5208-4a43-8c11-db21ab10c6e9",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keybord",
+                    "groups": "",
                     "action": "Promener",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -84,17 +73,6 @@
                     "name": "forward",
                     "id": "5c3ea99c-006c-4ea4-8414-0cd4245a2a1b",
                     "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keybord",
-                    "action": "Promener",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "backward",
-                    "id": "1e9de026-df27-426a-8865-c2d6bffa5c22",
-                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keybord",

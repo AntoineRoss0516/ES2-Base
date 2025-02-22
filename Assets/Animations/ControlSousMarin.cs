@@ -8,7 +8,6 @@ public class ControlSousMarin : MonoBehaviour
 {
     [SerializeField] private bool _speedSpeed;
     [SerializeField] private float _vitessePromenade;
-    [SerializeField] private float _vitesseRecule;
     private Rigidbody _rb;
     private Vector3 directionInput;
 
@@ -24,14 +23,6 @@ public class ControlSousMarin : MonoBehaviour
     {
         Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitessePromenade;
         directionInput = new Vector3(0f, directionAvecVitesse.z, directionAvecVitesse.y);
-
-    }
-
-    void OnReculer(InputValue directionBase)
-    {
-        Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitesseRecule;
-        directionInput = new Vector3(0f, -directionAvecVitesse.z, -directionAvecVitesse.y);
-
     }
 
     void OnSpeed()

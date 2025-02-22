@@ -1866,7 +1866,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedSpeed: 0
   _vitessePromenade: 0.1
-  _vitesseRecule: 0
   _modifierAnimTranslation: 1.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
