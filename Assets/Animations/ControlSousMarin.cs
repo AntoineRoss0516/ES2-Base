@@ -32,7 +32,7 @@ public class ControlSousMarin : MonoBehaviour
     }
     void OnPromener(InputValue directionBase)
     {
-        Vector3 directionAvecVitesse = directionBase.Get<Vector3>() * _vitessePromenade;
+        Vector3 directionAvecVitesse = directionBase.Get<Vector3>();
         directionInput = new Vector3(0f, directionAvecVitesse.z, directionAvecVitesse.y);
     }
 
@@ -42,7 +42,7 @@ public class ControlSousMarin : MonoBehaviour
     {
         Vector3 mouvement = directionInput;
 
-        _rb.AddForce(mouvement, ForceMode.VelocityChange);
+        _rb.AddForce(mouvement * _vitessePromenade, ForceMode.VelocityChange);
 
         Vector3 vitesseSurPlanez = new Vector3(0f , 0f, _rb.velocity.z);
         Vector3 vitesseSurPlaney = new Vector3(0f , _rb.velocity.y, 0f);
