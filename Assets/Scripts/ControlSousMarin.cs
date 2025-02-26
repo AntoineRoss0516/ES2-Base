@@ -46,9 +46,9 @@ public class ControlSousMarin : MonoBehaviour
 
         Vector3 vitesseSurPlanez = new Vector3(0f , 0f, _rb.velocity.z);
         Vector3 vitesseSurPlaney = new Vector3(0f , _rb.velocity.y, 0f);
-        _animator.SetFloat("VitesseZ", vitesseSurPlanez.magnitude * _modifierAnimTranslation);
-        _animator.SetFloat("VitesseY", vitesseSurPlaney.magnitude * _modifierAnimTranslation);
-        _animator.SetFloat("Deplacementz", vitesseSurPlanez.magnitude);
-        _animator.SetFloat("Deplacementy", vitesseSurPlaney.magnitude);
+        _animator.SetFloat("VitesseZ", vitesseSurPlanez.z * _modifierAnimTranslation);
+        _animator.SetFloat("VitesseY", vitesseSurPlaney.y * _modifierAnimTranslation);
+        _animator.SetFloat("Deplacementz", vitesseSurPlanez.z);
+        _animator.SetFloat("Deplacementy", vitesseSurPlaney.y);
     }
 }
